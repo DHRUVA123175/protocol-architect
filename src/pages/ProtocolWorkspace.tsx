@@ -10,41 +10,14 @@ import {
   Sparkles
 } from "lucide-react";
 
-// Mock data for similar protocols
+// Mock data for similar protocols - placeholder for integration
 const mockProtocols = [
-  { name: "Protocol_A_2023_Phase2_Oncology.pdf", similarity: 94, year: "2023" },
-  { name: "Study_B_Immunotherapy_Response.pdf", similarity: 87, year: "2023" },
-  { name: "Clinical_Trial_C_Biomarker_Analysis.pdf", similarity: 82, year: "2022" },
-  { name: "Research_D_Patient_Stratification.pdf", similarity: 76, year: "2022" },
-  { name: "Protocol_E_Endpoint_Design.pdf", similarity: 71, year: "2021" },
+  { name: "Document_A.pdf", similarity: 94, year: "2024" },
+  { name: "Document_B.pdf", similarity: 87, year: "2024" },
+  { name: "Document_C.pdf", similarity: 82, year: "2023" },
+  { name: "Document_D.pdf", similarity: 76, year: "2023" },
+  { name: "Document_E.pdf", similarity: 71, year: "2022" },
 ];
-
-// Mock generated content
-const mockContent = {
-  abstract: `This study aims to evaluate the efficacy and safety of a novel therapeutic approach in patients with advanced-stage disease. The primary endpoint focuses on overall response rate, while secondary endpoints include progression-free survival, duration of response, and safety profile assessment.
-
-The study will employ a randomized, double-blind, placebo-controlled design with approximately 300 participants across 25 clinical sites. Participants will be stratified based on prior treatment history and biomarker status.
-
-Key inclusion criteria include confirmed diagnosis, adequate organ function, and Eastern Cooperative Oncology Group (ECOG) performance status of 0-1. The study is expected to run for approximately 24 months with interim analyses planned at 6 and 12 months.`,
-  
-  background: `The therapeutic landscape for this disease has evolved significantly over the past decade, with the introduction of targeted therapies and immunotherapies providing new treatment options. Despite these advances, a substantial proportion of patients still experience disease progression, highlighting the need for novel therapeutic strategies.
-
-Previous research has demonstrated that the targeted pathway plays a critical role in disease pathogenesis. Preclinical studies have shown promising activity with selective inhibition of this pathway, leading to tumor regression in multiple disease models.
-
-The current standard of care includes combination chemotherapy, which is associated with significant toxicity and limited efficacy in advanced disease. This study builds upon the foundation of prior research to evaluate a potentially more effective and better-tolerated treatment approach.`,
-  
-  methodology: `Study Design: This is a Phase 2, randomized, double-blind, placebo-controlled, multicenter study evaluating the investigational agent versus placebo in patients with confirmed disease.
-
-Sample Size: Approximately 300 patients will be enrolled, with a 2:1 randomization ratio (active treatment: placebo).
-
-Treatment Arms:
-• Arm A: Investigational agent administered orally once daily
-• Arm B: Matching placebo administered orally once daily
-
-Primary Endpoint: Overall Response Rate (ORR) per RECIST v1.1 criteria, assessed by independent central review.
-
-Statistical Analysis: The study is powered at 90% to detect a clinically meaningful improvement in ORR. Kaplan-Meier methodology will be used for time-to-event endpoints. Subgroup analyses will be performed based on pre-specified biomarker status.`
-};
 
 interface LocationState {
   title: string;
@@ -66,7 +39,7 @@ export default function ProtocolWorkspace() {
   const generatedTitle = `${formData.studyType}: ${formData.title}`;
 
   const handleDownload = () => {
-    // Mock download action
+    // Placeholder download action for template integration
     const content = `
 STUDY PROTOCOL REPORT
 =====================
@@ -78,15 +51,15 @@ Study Type: ${formData.studyType}
 
 ABSTRACT
 --------
-${mockContent.abstract}
+[Generated abstract content will appear here]
 
 BACKGROUND & RATIONALE
 ----------------------
-${mockContent.background}
+[Generated background content will appear here]
 
 RESEARCH METHODOLOGY
 --------------------
-${mockContent.methodology}
+[Generated methodology content will appear here]
     `;
     
     const blob = new Blob([content], { type: 'text/plain' });
@@ -178,26 +151,26 @@ ${mockContent.methodology}
           >
             Protocol Sections
           </h3>
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <ProtocolCard
               title="Abstract"
-              description="High-level summary of the study design, objectives, and expected outcomes"
+              description="High-level summary of the study design, objectives, and expected outcomes."
               icon="abstract"
-              content={mockContent.abstract}
+              category="Section 1"
               delay={600}
             />
             <ProtocolCard
               title="Background & Rationale"
-              description="Scientific context, prior research, and justification for the study"
+              description="Context, prior research, and justification for the study approach."
               icon="background"
-              content={mockContent.background}
+              category="Section 2"
               delay={700}
             />
             <ProtocolCard
               title="Research Methodology"
-              description="Study design, endpoints, statistical approach, and analysis plan"
+              description="Study design, endpoints, statistical approach, and analysis plan."
               icon="methodology"
-              content={mockContent.methodology}
+              category="Section 3"
               delay={800}
             />
           </div>
