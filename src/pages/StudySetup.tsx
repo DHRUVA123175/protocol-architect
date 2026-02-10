@@ -14,30 +14,18 @@ import {
 import { AnalyzingLoader } from "@/components/ui/LoadingSpinner";
 import { Sparkles, FileText, Target, Stethoscope, FlaskConical } from "lucide-react";
 
+// TODO: Replace with API-fetched options
 const diseaseAreas = [
-  "Oncology",
-  "Cardiology",
-  "Neurology",
-  "Immunology",
-  "Infectious Disease",
-  "Rare Diseases",
-  "Dermatology",
-  "Gastroenterology",
-  "Endocrinology",
-  "Pulmonology",
+  "Category A",
+  "Category B",
+  "Category C",
 ];
 
+// TODO: Replace with API-fetched options
 const studyTypes = [
-  "Phase I Clinical Trial",
-  "Phase II Clinical Trial",
-  "Phase III Clinical Trial",
-  "Phase IV Clinical Trial",
-  "Observational Study",
-  "Retrospective Cohort",
-  "Prospective Cohort",
-  "Cross-Sectional Study",
-  "Case-Control Study",
-  "Meta-Analysis",
+  "Type A",
+  "Type B",
+  "Type C",
 ];
 
 interface FormData {
