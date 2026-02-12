@@ -65,7 +65,7 @@ export default function StudySetup() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#1a0a2e] via-[#2d1050] to-[#0d0221] relative overflow-hidden">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#3d1a6e] via-[#6b2fa0] to-[#a044c8] relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute top-[20%] left-[20%] h-[500px] w-[500px] rounded-full bg-[#ff00ff] opacity-25 blur-[120px] animate-[pulse-soft_4s_ease-in-out_infinite]" />
           <div className="absolute bottom-[20%] right-[20%] h-[400px] w-[400px] rounded-full bg-[#ff0099] opacity-20 blur-[100px] animate-[pulse-soft_5s_ease-in-out_infinite_1s]" />
@@ -76,19 +76,19 @@ export default function StudySetup() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1a0a2e] via-[#2d1050] to-[#0d0221] relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-[#3d1a6e] via-[#6b2fa0] to-[#a044c8] relative overflow-hidden">
       {/* 8D Floating Orbs */}
       <div className="pointer-events-none absolute inset-0 z-0">
-        <div className="absolute top-[-10%] left-[-5%] h-[500px] w-[500px] rounded-full bg-[#ff00ff] opacity-30 blur-[120px] animate-[pulse-soft_4s_ease-in-out_infinite]" />
-        <div className="absolute top-[20%] right-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff00ff] opacity-20 blur-[150px] animate-[pulse-soft_5s_ease-in-out_infinite_1s]" />
-        <div className="absolute bottom-[-15%] left-[30%] h-[700px] w-[700px] rounded-full bg-[#ff44cc] opacity-25 blur-[130px] animate-[pulse-soft_6s_ease-in-out_infinite_2s]" />
-        <div className="absolute top-[50%] left-[10%] h-[300px] w-[300px] rounded-full bg-[#cc00ff] opacity-15 blur-[100px] animate-[pulse-soft_3s_ease-in-out_infinite_0.5s]" />
-        <div className="absolute bottom-[20%] right-[15%] h-[400px] w-[400px] rounded-full bg-[#ff0099] opacity-20 blur-[110px] animate-[pulse-soft_4.5s_ease-in-out_infinite_1.5s]" />
+        <div className="absolute top-[-10%] left-[-5%] h-[500px] w-[500px] rounded-full bg-[#ff00ff] opacity-40 blur-[120px] animate-[pulse-soft_4s_ease-in-out_infinite]" />
+        <div className="absolute top-[20%] right-[-10%] h-[600px] w-[600px] rounded-full bg-[#ff66dd] opacity-30 blur-[150px] animate-[pulse-soft_5s_ease-in-out_infinite_1s]" />
+        <div className="absolute bottom-[-15%] left-[30%] h-[700px] w-[700px] rounded-full bg-[#ff44cc] opacity-35 blur-[130px] animate-[pulse-soft_6s_ease-in-out_infinite_2s]" />
+        <div className="absolute top-[50%] left-[10%] h-[300px] w-[300px] rounded-full bg-[#dd55ff] opacity-25 blur-[100px] animate-[pulse-soft_3s_ease-in-out_infinite_0.5s]" />
+        <div className="absolute bottom-[20%] right-[15%] h-[400px] w-[400px] rounded-full bg-[#ff0099] opacity-30 blur-[110px] animate-[pulse-soft_4.5s_ease-in-out_infinite_1.5s]" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,0,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,0,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
       </div>
 
       {/* Header */}
-      <header className="backdrop-blur-md sticky top-0 z-50 bg-black/20 border-b border-[#ff00ff]/10">
+      <header className="backdrop-blur-md sticky top-0 z-50 bg-white/10 border-b border-white/10">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/20 backdrop-blur-sm">
@@ -121,11 +121,11 @@ export default function StudySetup() {
 
           {/* Form Card */}
           <form onSubmit={handleSubmit}>
-            <div className="relative rounded-2xl bg-black/40 backdrop-blur-xl p-8 shadow-[0_0_80px_-15px_rgba(255,0,255,0.4),0_0_30px_-5px_rgba(255,0,153,0.3)] border border-[#ff00ff]/20 space-y-6">
+            <div className="relative rounded-2xl bg-white/90 backdrop-blur-xl p-8 shadow-[0_0_80px_-15px_rgba(255,0,255,0.4),0_0_30px_-5px_rgba(255,0,153,0.3)] border border-[#ff00ff]/20 space-y-6">
               {/* Study Title */}
               <div className="space-y-2">
-                <Label htmlFor="title" className="flex items-center gap-2 text-sm font-medium text-white/80">
-                  <FileText className="h-4 w-4 text-[#ff44cc]" />
+                <Label htmlFor="title" className="flex items-center gap-2 text-sm font-medium text-gray-700">
+                  <FileText className="h-4 w-4 text-[#cc00cc]" />
                   Study Title
                 </Label>
                 <Input
@@ -133,13 +133,13 @@ export default function StudySetup() {
                   placeholder="Enter your study title..."
                   value={formData.title}
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                  className="h-12 border-[#ff00ff]/20 bg-white/5 text-white placeholder:text-white/30 transition-all focus:ring-2 focus:ring-[#ff00ff]/30 focus:border-[#ff00ff]/40"
+                  className="h-12 border-gray-200 bg-gray-50/50 transition-all focus:ring-2 focus:ring-[#ff00ff]/20 focus:border-[#ff00ff]/40"
                 />
               </div>
 
               {/* Objective */}
               <div className="space-y-2">
-                <Label htmlFor="objective" className="flex items-center gap-2 text-sm font-medium text-white/80">
+                <Label htmlFor="objective" className="flex items-center gap-2 text-sm font-medium text-gray-700">
                   <Target className="h-4 w-4 text-[#ff00ff]" />
                   Study Objective
                 </Label>
@@ -149,7 +149,7 @@ export default function StudySetup() {
                   value={formData.objective}
                   onChange={(e) => setFormData({ ...formData, objective: e.target.value })}
                   rows={4}
-                  className="resize-none border-[#ff00ff]/20 bg-white/5 text-white placeholder:text-white/30 transition-all focus:ring-2 focus:ring-[#ff00ff]/30 focus:border-[#ff00ff]/40"
+                  className="resize-none border-gray-200 bg-gray-50/50 transition-all focus:ring-2 focus:ring-[#ff00ff]/20 focus:border-[#ff00ff]/40"
                 />
               </div>
 
@@ -157,18 +157,18 @@ export default function StudySetup() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Disease Area */}
                 <div className="space-y-2">
-                  <Label className="flex items-center gap-2 text-sm font-medium text-white/80">
-                    <Stethoscope className="h-4 w-4 text-[#ff0099]" />
+                  <Label className="flex items-center gap-2 text-sm font-medium text-gray-700">
+                    <Stethoscope className="h-4 w-4 text-[#dd00aa]" />
                     Disease Area
                   </Label>
                   <Select
                     value={formData.diseaseArea}
                     onValueChange={(value) => setFormData({ ...formData, diseaseArea: value })}
                   >
-                    <SelectTrigger className="h-12 border-[#ff00ff]/20 bg-white/5 text-white">
+                    <SelectTrigger className="h-12 border-gray-200 bg-gray-50/50">
                       <SelectValue placeholder="Select disease area" />
                     </SelectTrigger>
-                    <SelectContent className="bg-[#1a0a2e] border-[#ff00ff]/20 shadow-[0_0_30px_rgba(255,0,255,0.2)]">
+                    <SelectContent className="bg-white border shadow-xl">
                       {diseaseAreas.map((area) => (
                         <SelectItem key={area} value={area}>
                           {area}
@@ -180,18 +180,18 @@ export default function StudySetup() {
 
                 {/* Study Type */}
                 <div className="space-y-2">
-                  <Label className="flex items-center gap-2 text-sm font-medium text-white/80">
-                    <FlaskConical className="h-4 w-4 text-[#cc00ff]" />
+                  <Label className="flex items-center gap-2 text-sm font-medium text-gray-700">
+                    <FlaskConical className="h-4 w-4 text-[#aa00dd]" />
                     Study Type
                   </Label>
                   <Select
                     value={formData.studyType}
                     onValueChange={(value) => setFormData({ ...formData, studyType: value })}
                   >
-                    <SelectTrigger className="h-12 border-[#ff00ff]/20 bg-white/5 text-white">
+                    <SelectTrigger className="h-12 border-gray-200 bg-gray-50/50">
                       <SelectValue placeholder="Select study type" />
                     </SelectTrigger>
-                    <SelectContent className="bg-[#1a0a2e] border-[#ff00ff]/20 shadow-[0_0_30px_rgba(255,0,255,0.2)]">
+                    <SelectContent className="bg-white border shadow-xl">
                       {studyTypes.map((type) => (
                         <SelectItem key={type} value={type}>
                           {type}
@@ -215,7 +215,7 @@ export default function StudySetup() {
               </div>
 
               {/* Helper Text */}
-              <p className="text-center text-xs text-white/40">
+              <p className="text-center text-xs text-gray-500">
                 Our AI will retrieve similar protocols and generate comprehensive documentation based on your inputs.
               </p>
             </div>
