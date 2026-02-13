@@ -74,7 +74,13 @@ RESEARCH METHODOLOGY
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen relative overflow-hidden" style={{ background: "linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 30%, #1a0a2e 60%, #0d0221 100%)" }}>
+      {/* 8D Background orbs */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute top-20 left-1/4 w-96 h-96 rounded-full bg-fuchsia-600/15 blur-[120px] animate-[pulse-soft_4s_ease-in-out_infinite]" />
+        <div className="absolute bottom-40 right-1/4 w-80 h-80 rounded-full bg-purple-600/15 blur-[100px] animate-[pulse-soft_5s_ease-in-out_infinite_1s]" />
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 rounded-full bg-pink-600/10 blur-[140px] animate-[pulse-soft_6s_ease-in-out_infinite_2s]" />
+      </div>
       {/* Header */}
       <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
